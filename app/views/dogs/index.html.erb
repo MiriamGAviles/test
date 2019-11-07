@@ -1,0 +1,8 @@
+<h1>Dogs#index</h1>
+
+ <% @dogs.each do |values| %>
+ 	
+	<%= check_box_tag(values.name)%>
+	<span> <%= link_to values.name, dog_path(values[:id]) %></span><br>
+ <%end%>
+<%=link_to "Nuevo", new_dog_path %>
